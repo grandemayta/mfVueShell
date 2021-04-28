@@ -2,7 +2,7 @@
   <header>
     <ul>
       <li>
-        <router-link to="/">Home</router-link>
+        <router-link to="/users">Home</router-link>
       </li>
     </ul>
   </header>

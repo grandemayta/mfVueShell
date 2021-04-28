@@ -14,7 +14,7 @@ module.exports = {
         filename: "remoteEntry.js",
         remotes: {
           mfUserList: 'mfUserList@http://localhost:8082/remoteEntry.js',
-          // mfUserDetail: 'mfUserDetail@http://localhost:8083/remoteEntry.js',
+          mfUserDetail: 'mfUserDetail@http://localhost:8083/remoteEntry.js',
         },
         exposes: {
           './Header': './src/components/Header.vue',

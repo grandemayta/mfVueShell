@@ -4,13 +4,13 @@ import App from './App.vue';
 
 const routes = [
   {
-    path: '/',
+    path: '/users',
     component: defineAsyncComponent(() => import('mfUserList/UserList')) 
   },
-  /* {
-    path: '/about',
-    component: defineAsyncComponent(() => import('mfUserDetail/About'))
-  }, */
+  {
+    path: '/users/:id',
+    component: defineAsyncComponent(() => import('mfUserDetail/UserDetail'))
+  },
 ];
 
 const router = createRouter({
