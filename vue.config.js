@@ -10,9 +10,12 @@ module.exports = {
     config
       .plugin('module-federation-plugin')
       .use(require('webpack').container.ModuleFederationPlugin, [{
-        name: "mfUserList",
+        name: "mfVueShell",
         filename: "remoteEntry.js",
-        remotes: {},
+        remotes: {
+          mfUserList: 'mfUserList@http://localhost:8082/remoteEntry.js',
+          // mfUserDetail: 'mfUserDetail@http://localhost:8083/remoteEntry.js',
+        },
         exposes: {
           './Header': './src/components/Header.vue',
           './Footer': './src/components/Footer.vue'
@@ -23,11 +26,12 @@ module.exports = {
             singleton: true,
             requiredVersion: deps.vue,
           }
-        }
+        },
     }])
   },
 
   devServer: {
+    historyApiFallback: true,
     port: PORT,
     hot: true,
     headers: {

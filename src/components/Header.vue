@@ -1,6 +1,10 @@
 <template>
   <header>
-    <h1>Module Federation Demo With VueJS 3</h1>
+    <ul>
+      <li>
+        <router-link to="/">Home</router-link>
+      </li>
+    </ul>
   </header>
 </template>
 
@@ -19,9 +23,18 @@ export default {
     background: #303030;
   }
 
-  h1 {
+  ul {
+    display: flex;
+    list-style: none;
+  }
+
+  ul li {
     display: flex;
     align-items: center;
+  }
+
+  ul li a {
+    margin-right: 20px;
     color: #f0f0f0;
   }
 </style>

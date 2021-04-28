@@ -1,5 +1,5 @@
 {
-  "name": "mf-user-list",
+  "name": "mf-vue-shell",
   "version": "0.1.0",
   "private": true,
   "author": {
@@ -14,7 +14,8 @@
   },
   "dependencies": {
     "core-js": "^3.8.3",
-    "vue": "^3.0.4"
+    "vue": "^3.0.4",
+    "vue-router": "^4.0.6"
   },
   "devDependencies": {
     "@babel/core": "^7.12.16",
